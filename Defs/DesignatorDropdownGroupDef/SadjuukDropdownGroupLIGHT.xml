@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- Street lights -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukStreetLightA</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukStreetLightB</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- =============================================================================================================================================== -->
+  
+<!-- Wall lights -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWallLightA</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWallLightB</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWallLightC</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- =============================================================================================================================================== -->
+    
+<!-- lights -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightA</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightB</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightC</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightD</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightE</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightF</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukLightG</defName>
+  </DesignatorDropdownGroupDef>
+
+</Defs>

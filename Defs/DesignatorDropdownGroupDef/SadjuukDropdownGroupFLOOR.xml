@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- Painted Lines -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukPaintedLines</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- Arrows Paint -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukPaintArrowA</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- Zebra Paint -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukZebra</defName>
+  </DesignatorDropdownGroupDef>
+  
+<!-- =============================================================================================================================================== -->
+	
+	
+<!-- Wood Floor A -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWoodFloorA</defName>
+  </DesignatorDropdownGroupDef>
+		
+<!-- Wood Floor B -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWoodFloorB</defName>
+  </DesignatorDropdownGroupDef>
+	
+<!-- Concrete Floor A -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteFloorA</defName>
+  </DesignatorDropdownGroupDef>
+    
+<!-- Steel Floor A + B -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukSteelFloorA</defName>
+  </DesignatorDropdownGroupDef>
+  
+<!-- Steel Floor C -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukSteelFloorC</defName>
+  </DesignatorDropdownGroupDef>
+  
+</Defs>

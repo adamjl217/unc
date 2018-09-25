@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+<!-- Metallurgy : Bessemer Converter - Open Hearth Furnace - Electric Arc Furnace -->
+    <ResearchProjectDef>
+    <defName>SadjuukMetallurgyA</defName>
+    <label>Bessemer Converter</label>
+    <description>The Bessemer Converter will allow your colony to process industrially raw steel.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukMetallurgyB</defName>
+    <label>Open Hearth Furnace</label>
+    <description>The Open Hearth Furnace is the improvement of the Bessemer Converter.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukMetallurgyA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukMetallurgyC</defName>
+    <label>Electric Arc Furnace.</label>
+    <description>Research how to process row steel with the powerful Electric Arc Furnace technology.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukMetallurgyB</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Production : Production Lines - Machine Tools - Industrial Robotics -->
+    <ResearchProjectDef>
+    <defName>SadjuukProductionA</defName>
+    <label>Production Lines</label>
+    <description>This research allow your colony to build efficient Production Lines.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>6.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+    <defName>SadjuukProductionB</defName>
+    <label>Machine Tools</label>
+    <description>Machine Tools using to improve your production lines.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukProductionA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>6.5</researchViewY>
+    </ResearchProjectDef>
+ 
+    <ResearchProjectDef>
+    <defName>SadjuukProductionC</defName>
+    <label>Industrial Robotics.</label>
+    <description>Devlops Industrial Robotics that are more efficient than machine tools.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukProductionB</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>6.5</researchViewY>
+    </ResearchProjectDef>
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Construction : Construction Materials - Shielded Constructions - Camo Walls - Armored Constructions -->
+    <ResearchProjectDef>
+    <defName>SadjuukConstructionA</defName>
+    <label>Basic Construction</label>
+    <description>This important research allow you to produce Concrete, Paint, Glass and other basic constructions.</description>
+    <baseCost>2400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>7</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukConstructionB</defName>
+    <label>Shielded Walls</label>
+    <description>Shielded Walls and doors are essential to protect your colony or build bunkers.</description>
+    <baseCost>1100</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukConstructionA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>7</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+    <defName>SadjuukConstructionC</defName>
+    <label>Camo Shielded Walls.</label>
+    <description>Study the effectiveness of different types of camouflage. Allow you to build Camo Shielded Walls.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukConstructionB</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>7</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+    <defName>SadjuukConstructionD</defName>
+    <label>Armored Walls</label>
+    <description>Develop Armored Walls and Doors, with the strongest materials.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukConstructionC</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>7</researchViewY>
+    </ResearchProjectDef>
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Lighting : LED - Street Lights - Advanced lighting -->
+    <ResearchProjectDef>
+    <defName>SadjuukLightA</defName>
+    <label>LED Lighting</label>
+    <description>Efficient lighting based on LED technology.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>7.5</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukLightB</defName>
+    <label>Street Lighting</label>
+    <description>Industrial outdoor Lighting.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukLightA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>7.5</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukLightC</defName>
+    <label>Advanced Lighting</label>
+    <description>Advanced and armored lighting.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukLightB</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>7.5</researchViewY>
+    </ResearchProjectDef>
+
+  
+<!-- =============================================================================================================================================== -->
+  
+<!-- Power : Fuel Oil Generators - Gen A - Gen B -->
+    <ResearchProjectDef>
+    <defName>SadjuukFuelOilA</defName>
+    <label>Fuel Oil</label>
+    <description>Fuel Oil Production and Generators.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>8</researchViewY>
+    </ResearchProjectDef>
+	
+    <ResearchProjectDef>
+    <defName>SadjuukFuelOilB</defName>
+    <label>Fuel Oil Generator A</label>
+    <description>A large Fuel Oil Generator.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukFuelOilA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>8</researchViewY>
+    </ResearchProjectDef>
+	
+    <ResearchProjectDef>
+    <defName>SadjuukFuelOilC</defName>
+    <label>Fuel Oil Generator B</label>
+    <description>An improvement of the generator A.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukFuelOilB</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>8</researchViewY>
+    </ResearchProjectDef>
+	
+<!-- =============================================================================================================================================== -->
+  
+<!-- Power : Diesel Generators - Gen N - Gen M -->
+    <ResearchProjectDef>
+    <defName>SadjuukDieselA</defName>
+    <label>Diesel Generators</label>
+    <description>Diesel Production and portable Generators.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukFuelOilA</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>8.5</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>SadjuukDieselB</defName>
+    <label>Diesel Generators N</label>
+    <description>Armored Diesel Generator N.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukDieselA</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>8.5</researchViewY>
+    </ResearchProjectDef>
+  
+  
+    <ResearchProjectDef>
+    <defName>SadjuukDieselC</defName>
+    <label>Diesel Generators M</label>
+    <description>Armored Diesel Generators M.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>SadjuukDieselB</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>8.5</researchViewY>
+    </ResearchProjectDef>
+  
+</Defs>

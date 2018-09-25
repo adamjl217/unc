@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+<!-- UN-Industry  -->
+    <DesignationCategoryDef>
+    <defName>SadjuukUN-Industry</defName>
+    <label>UN-Industry</label>
+    <description>Available technologies from UN and UNSC colonization program</description>
+    <order>1000</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+<!-- UN-Colony -->
+    <DesignationCategoryDef>
+    <defName>SadjuukUN-Colony</defName>
+    <label>UN-Colony</label>
+    <description>Available technologies from UN and UNSC colonization program</description>
+    <order>1100</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_SmoothSurface</li>
+      <li>Designator_RemoveFloor</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+<!-- UN-Furniture -->
+    <DesignationCategoryDef>
+    <defName>SadjuukUN-Furniture</defName>
+    <label>UN-Furniture</label>
+    <description>Available technologies from UN and UNSC colonization program</description>
+    <order>1200</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_SmoothSurface</li>
+      <li>Designator_RemoveFloor</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+  
+</Defs>

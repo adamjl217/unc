@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+<!-- Base Fence -->
+    <ThingDef ParentName="BuildingBase" Name="SadjuukFenceBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>Impassable</passability>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <coversFloor>false</coversFloor>
+	<placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <canOverlapZones>false</canOverlapZones>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+	<designationCategory>SadjuukUN-Colony</designationCategory>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+<!-- Wooden Fence -->
+    <ThingDef ParentName="SadjuukFenceBase">
+		<defName>SadjuukWoodFence</defName>
+		<label>Wood Fence</label>
+		<description>HP : 80
+A rustic Wooden fence.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/FENCE/SadjuukWoodFence</texPath>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom7</li>
+    </linkFlags>
+    </graphicData>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/FENCE/SadjuukWoodFence_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+	<uiIconPath>SadjuukBUILD/FENCE/SadjuukWoodFenceIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>120</WorkToBuild>
+      <Flammability>1</Flammability>
+    </statBases>
+	<costList>
+		  <WoodLog>2</WoodLog>
+	</costList>
+	<blockLight>false</blockLight>
+    <fillPercent>0.2</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	<constructEffect>ConstructWood</constructEffect>
+	</ThingDef>
+   
+<!-- Grid Fence -->
+    <ThingDef ParentName="SadjuukFenceBase">
+		<defName>SadjuukGridFence</defName>
+		<label>Grid Fence</label>
+		<description>HP : 250
+An industrial metal grid fence.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/FENCE/SadjuukGridFence</texPath>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom7</li>
+    </linkFlags>
+    </graphicData>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/FENCE/SadjuukGridFence_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+	<uiIconPath>SadjuukBUILD/FENCE/SadjuukGridFenceIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0.2</Flammability>
+    </statBases>
+	<costList>
+		  <SadjuukMetalGrid>2</SadjuukMetalGrid>
+		  <SadjuukSteelTube>1</SadjuukSteelTube>
+	</costList>
+	<blockLight>false</blockLight>
+    <fillPercent>0.2</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+
+<!-- Glass Partition -->
+    <ThingDef ParentName="SadjuukFenceBase">
+		<defName>SadjuukGlassFenceA</defName>
+		<label>Glass Partition</label>
+		<description>HP : 70
+As safe as aesthetically pleasing, glass partitions are an easy way to transform your space.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/FENCE/SadjuukGlassFenceA</texPath>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom7</li>
+    </linkFlags>
+    </graphicData>
+		<uiIconPath>SadjuukBUILD/FENCE/SadjuukGlassFenceAIcon</uiIconPath>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/FENCE/SadjuukGlassFenceA_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0.2</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+	<costList>
+		  <SadjuukGlass>2</SadjuukGlass>
+		  <SadjuukSteelTube>1</SadjuukSteelTube>
+	</costList>
+	<blockLight>false</blockLight>
+    <fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+	
+<!-- Glass Fence -->
+    <ThingDef ParentName="SadjuukFenceBase">
+		<defName>SadjuukGlassFenceB</defName>
+		<label>Glass Fence</label>
+		<description>HP : 35
+As safe as aesthetically pleasing, glass partitions are an easy way to transform your space.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/FENCE/SadjuukGlassFenceB</texPath>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom7</li>
+    </linkFlags>
+    </graphicData>
+		<uiIconPath>SadjuukBUILD/FENCE/SadjuukGlassFenceBIcon</uiIconPath>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/FENCE/SadjuukGlassFenceB_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <statBases>
+      <MaxHitPoints>35</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>0.2</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+	<costList>
+		  <SadjuukGlass>1</SadjuukGlass>
+		  <SadjuukSteelTube>1</SadjuukSteelTube>
+	</costList>
+	<blockLight>false</blockLight>
+    <fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+
+<!-- Concrete Fence -->
+    <ThingDef ParentName="SadjuukFenceBase">
+		<defName>SadjuukConcreteFence</defName>
+		<label>Concrete Fence</label>
+		<description>HP : 300
+An industrial concrete fence.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/FENCE/SadjuukConcreteFence</texPath>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom7</li>
+    </linkFlags>
+    </graphicData>
+		<uiIconPath>SadjuukBUILD/FENCE/SadjuukConcreteFenceIcon</uiIconPath>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/FENCE/SadjuukConcreteFence_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukConcrete>3</SadjuukConcrete>
+	</costList>
+	<blockLight>true</blockLight>
+    <fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+	
+</Defs>

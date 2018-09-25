@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+
+<!-- Painted Lines base -->
+    <ThingDef Name="SadjuukPaintLinesBase" ParentName="BuildingBase" Abstract="True">
+	<thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+	<blueprintGraphicData>
+        <texPath>SadjuukPAINT/SadjuukWhitePaintDoubleLines_Blueprint</texPath>
+    </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+	<clearBuildingArea>false</clearBuildingArea>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <constructEffect>ConstructDirt</constructEffect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>SadjuukUN-Colony</designationCategory>
+	<statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+	<placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <SadjuukSyntheticPaint>1</SadjuukSyntheticPaint>
+    </costList>
+    <placeWorkers>
+      <li>PlaceWorker_Conduit</li>
+    </placeWorkers>
+    <neverMultiSelect>true</neverMultiSelect>
+    <researchPrerequisites>
+		<li>SadjuukConstructionA</li>
+	</researchPrerequisites>
+	<designatorDropdown>SadjuukPaintedLines</designatorDropdown>
+    </ThingDef>
+
+<!-- SadjuukYellowPaintDoubleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukYellowPaintDoubleLines</defName>
+    <label>Yellow Double lines</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukYellowPaintDoubleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom8</li>
+    </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukYellowPaintDoubleLinesIcon</uiIconPath>	
+    </ThingDef>
+
+<!-- SadjuukWhitePaintDoubleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukWhitePaintDoubleLines</defName>
+    <label>White Double lines</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukWhitePaintDoubleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom8</li>
+    </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukWhitePaintDoubleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- SadjuukBluePaintDoubleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukBluePaintDoubleLines</defName>
+    <label>Blue Double lines</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukBluePaintDoubleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom8</li>
+    </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukBluePaintDoubleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- SadjuukRedPaintDoubleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukRedPaintDoubleLines</defName>
+    <label>Red Double lines</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukRedPaintDoubleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+	<linkFlags>
+        <li>Custom8</li>
+    </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukRedPaintDoubleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- SadjuukYellowPaintSimpleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukYellowPaintSimpleLines</defName>
+    <label>Yellow Simple lines</label>
+    <description>Painted line.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukYellowPaintSimpleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukYellowPaintSimpleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- SadjuukWhitePaintSimpleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukWhitePaintSimpleLines</defName>
+    <label>White Simple line</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukWhitePaintSimpleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukWhitePaintSimpleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- SadjuukBluePaintSimpleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukBluePaintSimpleLines</defName>
+    <label>Blue Simple line</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukBluePaintSimpleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukBluePaintSimpleLinesIcon</uiIconPath>
+    </ThingDef>
+
+   <!-- SadjuukRedPaintSimpleLines -->
+    <ThingDef ParentName="SadjuukPaintLinesBase">
+    <defName>SadjuukRedPaintSimpleLines</defName>
+    <label>Red Simple line</label>
+    <description>Painted lines.</description>
+    <graphicData>
+      <texPath>SadjuukPAINT/SadjuukRedPaintSimpleLines_Blueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukRedPaintSimpleLinesIcon</uiIconPath>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+
+<!-- Paint Arrow Base A -->
+    <ThingDef Name="SadjuukPaintArrowA" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+    </building>
+
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+	<clearBuildingArea>false</clearBuildingArea>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <constructEffect>ConstructDirt</constructEffect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>SadjuukUN-Colony</designationCategory>
+    <researchPrerequisites>
+		<li>SadjuukConstructionA</li>
+	</researchPrerequisites>
+	<designatorDropdown>SadjuukPaintArrowA</designatorDropdown>
+    </ThingDef>
+
+<!-- SadjuukYellowPaintArrowA -->
+    <ThingDef ParentName="SadjuukPaintArrowA">
+    <defName>SadjuukYellowPaintArrowA</defName>
+    <label>Yellow Painted arrow</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukYellowPaintArrowA</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukYellowPaintArrowAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted arrow.</description>
+    <costList>
+      <SadjuukSyntheticPaint>1</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukWhitePaintArrowA -->
+    <ThingDef ParentName="SadjuukPaintArrowA">
+    <defName>SadjuukWhitePaintArrowA</defName>
+    <label>White Painted arrow</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukWhitePaintArrowA</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukWhitePaintArrowAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted arrow.</description>
+    <costList>
+      <SadjuukSyntheticPaint>1</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukBluePaintArrowA -->
+    <ThingDef ParentName="SadjuukPaintArrowA">
+    <defName>SadjuukBluePaintArrowA</defName>
+    <label>Blue Painted arrow</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukBluePaintArrowA</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukBluePaintArrowAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted arrow.</description>
+    <costList>
+      <SadjuukSyntheticPaint>1</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukRedPaintArrowA -->
+    <ThingDef ParentName="SadjuukPaintArrowA">
+    <defName>SadjuukRedPaintArrowA</defName>
+    <label>Red Painted arrow</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukRedPaintArrowA</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukRedPaintArrowAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted arrow.</description>
+    <costList>
+      <SadjuukSyntheticPaint>1</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+
+<!-- Paint Zebra Base (not Rotable) -->
+    <ThingDef Name="SadjuukPaintBaseB" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+	<clearBuildingArea>false</clearBuildingArea>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <constructEffect>ConstructDirt</constructEffect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>SadjuukUN-Colony</designationCategory>
+    <researchPrerequisites>
+		<li>SadjuukConstructionA</li>
+	</researchPrerequisites>
+	<designatorDropdown>SadjuukZebra</designatorDropdown>
+    </ThingDef>
+
+<!-- SadjuukRedZebraA -->
+    <ThingDef ParentName="SadjuukPaintBaseB">
+    <defName>SadjuukRedZebraA</defName>
+    <label>Red Zebra (L)</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukRedZebraA</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukRedZebraAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted Zebra.</description>
+    <costList>
+      <SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukRedZebraB -->
+    <ThingDef ParentName="SadjuukPaintBaseB">
+    <defName>SadjuukRedZebraB</defName>
+    <label>Red Zebra (R)</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukRedZebraB</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukRedZebraBIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted Zebra.</description>
+    <costList>
+      <SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukYellowZebraA -->
+    <ThingDef ParentName="SadjuukPaintBaseB">
+    <defName>SadjuukYellowZebraA</defName>
+    <label>Yellow Zebra (L)</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukYellowZebraA</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukYellowZebraAIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted Zebra.</description>
+    <costList>
+      <SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+
+<!-- SadjuukYellowZebraB -->
+    <ThingDef ParentName="SadjuukPaintBaseB">
+    <defName>SadjuukYellowZebraB</defName>
+    <label>Yellow Zebra (R)</label>
+    <graphicData>
+		  <texPath>SadjuukPAINT/SadjuukYellowZebraB</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>SadjuukPAINT/SadjuukYellowZebraBIcon</uiIconPath>
+    <size>(1,1)</size>
+    <description>Painted Zebra.</description>
+    <costList>
+      <SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+    </costList>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    </ThingDef>
+  
+  
+  
+
+
+</Defs>

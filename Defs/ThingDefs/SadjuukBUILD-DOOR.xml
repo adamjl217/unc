@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+<!-- Base Doors -->
+    <ThingDef ParentName="BuildingBase" Name="SadjuukDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+	<designationCategory>SadjuukUN-Colony</designationCategory>
+   
+    <useHitPoints>true</useHitPoints>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawerType>RealtimeOnly</drawerType>
+
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Wooden Gate -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukWoodDoorBase" Abstract="True">
+	<designatorDropdown>SadjuukWoodDoor</designatorDropdown>
+    <description>HP : 80
+A rustic Wooden gate.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+	  <Flammability>1</Flammability>
+    </statBases>
+	<costList>
+		  <WoodLog>10</WoodLog>
+	</costList>
+    <blockLight>false</blockLight>
+	<fillPercent>0.2</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	<constructEffect>ConstructWood</constructEffect>
+    </ThingDef>
+
+<!-- Wooden Gate Horizontal -->
+    <ThingDef ParentName="SadjuukWoodDoorBase">
+    <defName>SadjuukWoodDoorH</defName>
+    <label>Wooden Gate (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukWoodDoorHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Wooden Gate Vertical -->
+    <ThingDef ParentName="SadjuukWoodDoorBase">
+    <defName>SadjuukWoodDoorV</defName>
+    <label>Wooden Gate (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukWoodDoorVIcon</uiIconPath>
+  </ThingDef>  
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Grid Door -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukGridDoorBase" Abstract="True">
+	<designatorDropdown>SadjuukGridDoor</designatorDropdown>
+    <description>HP : 250
+An industrial metal grid gate.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+	  <Flammability>0.2</Flammability>
+    </statBases>
+	<costList>
+		  <SadjuukMetalGrid>4</SadjuukMetalGrid>
+		  <SadjuukSteelTube>5</SadjuukSteelTube>
+		  <SadjuukBasicComponent>2</SadjuukBasicComponent>
+	</costList>
+    <blockLight>false</blockLight>
+	<fillPercent>0.2</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- Grid Door Horizontal -->
+    <ThingDef ParentName="SadjuukGridDoorBase">
+    <defName>SadjuukGridDoorH</defName>
+    <label>Grid Gate (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukGridDoorH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukGridDoorH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukGridDoorHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Grid Door Vertical -->
+    <ThingDef ParentName="SadjuukGridDoorBase">
+    <defName>SadjuukGridDoorV</defName>
+    <label>Grid Gate (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukGridDoorV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukGridDoorV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukGridDoorVIcon</uiIconPath>
+  </ThingDef>  
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Glass Door -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukGlassDoorBase" Abstract="True">
+	<designatorDropdown>SadjuukGlassDoor</designatorDropdown>
+    <description>HP : 50
+As safe as aesthetically pleasing, glass partitions are an easy way to transform your space.</description>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+	  <Flammability>0.2</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+	<costList>
+		  <SadjuukGlass>2</SadjuukGlass>
+		  <SadjuukSteelTube>5</SadjuukSteelTube>
+		  <SadjuukBasicComponent>6</SadjuukBasicComponent>
+	</costList>
+    <blockLight>false</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+    </comps>
+    </ThingDef>
+  
+  
+<!-- Glass Door Horizontal -->
+    <ThingDef ParentName="SadjuukGlassDoorBase">
+    <defName>SadjuukGlassDoorH</defName>
+    <label>Glass Gate (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukGlassDoorH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukGlassDoorH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukGlassDoorHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Glass Door Vertical -->
+    <ThingDef ParentName="SadjuukGlassDoorBase">
+    <defName>SadjuukGlassDoorV</defName>
+    <label>Glass Gate (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukGlassDoorV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukGlassDoorV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukGlassDoorVIcon</uiIconPath>
+    </ThingDef>  
+  
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Wood Door A -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukWoodDoorABase" Abstract="True">
+	<designatorDropdown>SadjuukWoodDoorA</designatorDropdown>
+    <description>HP : 350
+Heavy Armored door.</description>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+	  <Flammability>1</Flammability>
+	  <Beauty>0</Beauty>
+    </statBases>
+	<costList>
+			<WoodLog>15</WoodLog>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	<constructEffect>ConstructWood</constructEffect>
+    </ThingDef>
+    
+<!-- Wood Door Horizontal A -->
+    <ThingDef ParentName="SadjuukWoodDoorABase">
+    <defName>SadjuukWoodDoorAH</defName>
+    <label>Wooden Door (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Wood  Door Vertical A -->
+    <ThingDef ParentName="SadjuukWoodDoorABase">
+    <defName>SadjuukWoodDoorAV</defName>
+    <label>Wooden Door (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukWoodDoorAVIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Steel Door A -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukSteelDoorABase" Abstract="True">
+	<designatorDropdown>SadjuukSteelDoors</designatorDropdown>
+    <description>HP : 500
+Rustic Steel door.</description>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+	  <Flammability>0.1</Flammability>
+	  <Beauty>-1</Beauty>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>8</SadjuukSteelPlate>
+			<WoodLog>4</WoodLog>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    </ThingDef>
+    
+<!-- Steel Door Horizontal A -->
+    <ThingDef ParentName="SadjuukSteelDoorABase">
+    <defName>SadjuukSteelDoorAH</defName>
+    <label>Steel Door A (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Steel  Door Vertical A -->
+    <ThingDef ParentName="SadjuukSteelDoorABase">
+    <defName>SadjuukSteelDoorAV</defName>
+    <label>Steel Door A (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorAVIcon</uiIconPath>
+    </ThingDef>  
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Steel Door B -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukSteelDoorBBase" Abstract="True">
+	<designatorDropdown>SadjuukSteelDoors</designatorDropdown>
+    <description>HP : 600
+Steel door.</description>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+	  <Flammability>0.1</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>12</SadjuukSteelPlate>
+		    <SadjuukBasicComponent>2</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+    
+<!-- Steel Door Horizontal B -->
+    <ThingDef ParentName="SadjuukSteelDoorBBase">
+    <defName>SadjuukSteelDoorBH</defName>
+    <label>Steel Door B (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Steel  Door Vertical B -->
+    <ThingDef ParentName="SadjuukSteelDoorBBase">
+    <defName>SadjuukSteelDoorBV</defName>
+    <label>Steel Door B (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorBVIcon</uiIconPath>
+    </ThingDef>  
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Steel Door C -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukSteelDoorCBase" Abstract="True">
+	<designatorDropdown>SadjuukSteelDoors</designatorDropdown>
+    <description>HP : 600
+Steel door.</description>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+	  <Flammability>0.1</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>12</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukBasicComponent>2</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+    
+<!-- Steel Door Horizontal C -->
+    <ThingDef ParentName="SadjuukSteelDoorCBase">
+    <defName>SadjuukSteelDoorCH</defName>
+    <label>Steel Door C (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Steel  Door Vertical C -->
+    <ThingDef ParentName="SadjuukSteelDoorCBase">
+    <defName>SadjuukSteelDoorCV</defName>
+    <label>Steel Door C (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorCVIcon</uiIconPath>
+    </ThingDef>  
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Steel Door D -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukSteelDoorDBase" Abstract="True">
+	<designatorDropdown>SadjuukSteelDoors</designatorDropdown>
+    <description>HP : 600
+Steel door.</description>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+	  <Flammability>0.1</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>12</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukBasicComponent>2</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+    
+<!-- Steel Door Horizontal D -->
+    <ThingDef ParentName="SadjuukSteelDoorDBase">
+    <defName>SadjuukSteelDoorDH</defName>
+    <label>Steel Door D (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Steel  Door Vertical D -->
+    <ThingDef ParentName="SadjuukSteelDoorDBase">
+    <defName>SadjuukSteelDoorDV</defName>
+    <label>Steel Door D (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukSteelDoorDVIcon</uiIconPath>
+    </ThingDef>  
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Shielded Door A -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukShieldedDoorABase" Abstract="True">
+	<designatorDropdown>SadjuukShieldedDoors</designatorDropdown>
+    <description>HP : 990
+Heavy Shielded door.</description>
+    <statBases>
+      <MaxHitPoints>990</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+	  <Flammability>0</Flammability>
+	  <Beauty>0</Beauty>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>18</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukBasicComponent>4</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionB</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+    
+<!-- Shielded Door Horizontal A -->
+    <ThingDef ParentName="SadjuukShieldedDoorABase">
+    <defName>SadjuukShieldedDoorAH</defName>
+    <label>Shielded Door A (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Shielded  Door Vertical A -->
+    <ThingDef ParentName="SadjuukShieldedDoorABase">
+    <defName>SadjuukShieldedDoorAV</defName>
+    <label>Shielded Door A (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorAVIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Shielded Door B -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukShieldedDoorBBase" Abstract="True">
+	<designatorDropdown>SadjuukShieldedDoors</designatorDropdown>
+    <description>HP : 990
+Heavy Shielded door.</description>
+    <statBases>
+      <MaxHitPoints>990</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+	  <Flammability>0</Flammability>
+	  <Beauty>0</Beauty>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>18</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukBasicComponent>4</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionB</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+      
+<!-- Shielded Door Horizontal B -->
+    <ThingDef ParentName="SadjuukShieldedDoorBBase">
+    <defName>SadjuukShieldedDoorBH</defName>
+    <label>Shielded Door B (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Shielded Door Vertical B -->
+    <ThingDef ParentName="SadjuukShieldedDoorBBase">
+    <defName>SadjuukShieldedDoorBV</defName>
+    <label>Shielded Door B (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukShieldedDoorBVIcon</uiIconPath>
+    </ThingDef>  
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Armored Door A -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukArmoredDoorABase" Abstract="True">
+	<designatorDropdown>SadjuukArmoredDoors</designatorDropdown>
+    <description>HP : 2100
+Heavy Armored door.</description>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+	  <Flammability>0</Flammability>
+	  <Beauty>0</Beauty>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>24</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>4</SadjuukArmoredPlate>
+		    <SadjuukBasicComponent>8</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionD</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+    </comps>
+    </ThingDef>
+    
+<!-- Armored Door Horizontal A -->
+    <ThingDef ParentName="SadjuukArmoredDoorABase">
+    <defName>SadjuukArmoredDoorAH</defName>
+    <label>Armored Door A (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Armored  Door Vertical A -->
+    <ThingDef ParentName="SadjuukArmoredDoorABase">
+    <defName>SadjuukArmoredDoorAV</defName>
+    <label>Armored Door A (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorAVIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Armored Door B -->
+    <ThingDef ParentName="SadjuukDoorBase" Name="SadjuukArmoredDoorBBase" Abstract="True">
+	<designatorDropdown>SadjuukArmoredDoors</designatorDropdown>
+    <description>HP : 2100
+Heavy Armored door.</description>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+	  <Flammability>0</Flammability>
+	  <Beauty>0</Beauty>
+    </statBases>
+	<costList>
+			<SadjuukSteelPlate>24</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>4</SadjuukArmoredPlate>
+		    <SadjuukBasicComponent>8</SadjuukBasicComponent>
+	</costList>
+    <blockLight>true</blockLight>
+	<fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionD</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+    </comps>
+    </ThingDef>
+      
+<!-- Armored Door Horizontal B -->
+    <ThingDef ParentName="SadjuukArmoredDoorBBase">
+    <defName>SadjuukArmoredDoorBH</defName>
+    <label>Armored Door B (H)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBH_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBH_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBHIcon</uiIconPath>
+    </ThingDef>  
+  
+<!-- Armored  Door Vertical B -->
+    <ThingDef ParentName="SadjuukArmoredDoorBBase">
+    <defName>SadjuukArmoredDoorBV</defName>
+    <label>Armored Door B (V)</label>
+    <graphicData>
+      <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBV_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+	<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBV_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <uiIconPath>SadjuukBUILD/DOOR/SadjuukArmoredDoorBVIcon</uiIconPath>
+    </ThingDef>  
+  
+  
+ 
+	
+</Defs>

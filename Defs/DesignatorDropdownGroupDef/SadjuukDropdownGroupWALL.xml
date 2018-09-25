@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- Concrete Walls -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallA</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallAE</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- Shielded Concrete Walls -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallB</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallBE</defName>
+  </DesignatorDropdownGroupDef>
+
+<!-- Camo Shielded Concrete Walls -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallBCamo</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallBCamoE</defName>
+  </DesignatorDropdownGroupDef>
+    
+<!-- Armored Concrete Walls -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallC</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukConcreteWallCE</defName>
+  </DesignatorDropdownGroupDef>
+  
+<!-- =============================================================================================================================================== -->
+  
+<!-- Fences Gates -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWoodDoor</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukGridDoor</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukGlassDoor</defName>
+  </DesignatorDropdownGroupDef>
+  
+<!-- Doors -->
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukWoodDoorA</defName>
+  </DesignatorDropdownGroupDef>
+  
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukSteelDoors</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukShieldedDoors</defName>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SadjuukArmoredDoors</defName>
+  </DesignatorDropdownGroupDef>
+  
+</Defs>

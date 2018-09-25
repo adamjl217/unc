@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	
+<!-- Base Wall -->
+    <ThingDef ParentName="BuildingBase" Name="SadjuukWallBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <coversFloor>false</coversFloor>
+	<placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <canOverlapZones>false</canOverlapZones>
+	<blockLight>true</blockLight>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>SadjuukBUILD/WALL/SadjuukWall_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+	<designationCategory>SadjuukUN-Colony</designationCategory>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Steel Wall OA (Rusted steel) -->
+    <ThingDef ParentName="SadjuukWallBase">
+		<defName>SadjuukWallOA</defName>
+		<label>Steel Wall</label>
+		<description>HP : 450
+Untreated steel recovery wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukWallOA</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukWallOAIcon</uiIconPath>
+	<costList>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+		    <WoodLog>3</WoodLog>
+	</costList>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	</ThingDef>
+	
+<!-- Steel Wall 0A EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBase">
+		<defName>SadjuukWallOAE</defName>
+		<label>Steel Embrasure</label>
+		<description>HP : 450
+Untreated steel recovery Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukWallOAE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukWallOAEIcon</uiIconPath>
+	<costList>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+		    <WoodLog>4</WoodLog>
+	</costList>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	</ThingDef>
+	
+		
+<!-- Wood Wall OB (Wood log) -->
+    <ThingDef ParentName="SadjuukWallBase">
+		<defName>SadjuukWallOB</defName>
+		<label>Wooden Wall</label>
+		<description>HP : 350
+Wooden log wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukWallOB</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukWallOBIcon</uiIconPath>
+	<costList>
+		    <WoodLog>6</WoodLog>
+	</costList>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	<constructEffect>ConstructWood</constructEffect>
+	</ThingDef>
+	
+<!-- Wood Wall OB EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBase">
+		<defName>SadjuukWallOBE</defName>
+		<label>Wooden Embrasure</label>
+		<description>HP : 350
+Wooden log Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukWallOBE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukWallOBEIcon</uiIconPath>
+	<costList>
+		    <WoodLog>7</WoodLog>
+	</costList>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+	<constructEffect>ConstructWood</constructEffect>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Wall A -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseA" Abstract="True">
+    <statBases>
+      <MaxHitPoints>775</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukConstructionA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- Concrete Wall AA -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAA</defName>
+		<designatorDropdown>SadjuukConcreteWallA</designatorDropdown>
+		<label>Concrete Wall A</label>
+		<description>HP : 775
+Concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAA</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallAAIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+	
+<!-- Concrete Wall AA EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAAE</defName>
+		<designatorDropdown>SadjuukConcreteWallAE</designatorDropdown>
+		<label>Concrete Embrasure A</label>
+		<description>HP : 775
+Concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAAE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallAAEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+		    <SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+		
+<!-- Concrete Wall AB -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAB</defName>
+		<designatorDropdown>SadjuukConcreteWallA</designatorDropdown>
+		<label>Painted Wall B</label>
+		<description>HP : 775
+Painted concrete Wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAB</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallABIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+		
+<!-- Concrete Wall AB EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallABE</defName>
+		<designatorDropdown>SadjuukConcreteWallAE</designatorDropdown>
+		<label>Painted Embrasure B</label>
+		<description>HP : 775
+Painted concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallABE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallABEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+	
+<!-- Concrete Wall AC -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAC</defName>
+		<designatorDropdown>SadjuukConcreteWallA</designatorDropdown>
+		<label>Painted Wall C</label>
+		<description>HP : 775
+Painted concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAC</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallACIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+	
+<!-- Concrete Wall AC EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallACE</defName>
+		<designatorDropdown>SadjuukConcreteWallAE</designatorDropdown>
+		<label>Painted Embrasure C</label>
+		<description>HP : 775
+Painted concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallACE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallACEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+			
+<!-- Concrete Wall AD -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAD</defName>
+		<designatorDropdown>SadjuukConcreteWallA</designatorDropdown>
+		<label>Painted Wall D</label>
+		<description>HP : 775
+Painted concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAD</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallADIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+	
+<!-- Concrete Wall AD EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallADE</defName>
+		<designatorDropdown>SadjuukConcreteWallAE</designatorDropdown>
+		<label>Painted Embrasure D</label>
+		<description>HP : 775
+Painted concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallADE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallADEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>		
+	
+<!-- Concrete Wall AE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAE</defName>
+		<designatorDropdown>SadjuukConcreteWallA</designatorDropdown>
+		<label>Painted Wall E</label>
+		<description>HP : 775
+Painted concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallAEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+	
+<!-- Concrete Wall AE EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBaseA">
+		<defName>SadjuukConcreteWallAEE</defName>
+		<designatorDropdown>SadjuukConcreteWallAE</designatorDropdown>
+		<label>Painted Embrasure E</label>
+		<description>HP : 775
+Painted concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallAEE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallAEEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+<!-- Base Wall B (not Camo) -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseB" Abstract="True">
+    <statBases>
+      <MaxHitPoints>1550</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukConstructionB</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+	
+	
+<!-- Shielded Concrete Wall BA -->
+    <ThingDef ParentName="SadjuukWallBaseB">
+		<defName>SadjuukConcreteWallBA</defName>
+        <designatorDropdown>SadjuukConcreteWallB</designatorDropdown>
+		<label>Shielded Wall A</label>
+		<description>HP : 1550
+Shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBA</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBAIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BA EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseB">
+		<defName>SadjuukConcreteWallBAE</defName>
+        <designatorDropdown>SadjuukConcreteWallBE</designatorDropdown>
+		<label>Shielded Embrasure A</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBAE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBAEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BB -->
+    <ThingDef ParentName="SadjuukWallBaseB">
+		<defName>SadjuukConcreteWallBB</defName>
+        <designatorDropdown>SadjuukConcreteWallB</designatorDropdown>
+		<label>Shielded Wall B</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBB</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBBIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BB EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseB">
+		<defName>SadjuukConcreteWallBBE</defName>
+        <designatorDropdown>SadjuukConcreteWallBE</designatorDropdown>
+		<label>Shielded Embrasure B</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBBE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBBEIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+<!-- Base Wall CAMO B -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseCamoB" Abstract="True">
+    <statBases>
+      <MaxHitPoints>1550</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>3</SadjuukSyntheticPaint>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <designatorDropdown>SadjuukConcreteWallBCamo</designatorDropdown>
+    </ThingDef>
+
+<!-- Base Wall CAMO B EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseCamoBEmb" Abstract="True">
+    <statBases>
+      <MaxHitPoints>1550</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>3</SadjuukSyntheticPaint>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.75</fillPercent>
+    <researchPrerequisites>
+      <li>SadjuukConstructionC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <designatorDropdown>SadjuukConcreteWallBCamoE</designatorDropdown>
+    </ThingDef>
+	
+	
+<!-- Shielded Concrete Wall BC -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBC</defName>
+		<label>Woodland Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBC</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBCIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BC EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBCE</defName>
+		<label>Woodland Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBCE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBCEIcon</uiIconPath>
+	</ThingDef>
+
+<!-- Shielded Concrete Wall BD -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBD</defName>
+		<label>Flecktarn Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBD</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBDIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BD EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBDE</defName>
+		<label>Flecktarn Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBDE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBDEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BE -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBE</defName>
+		<label>Desert Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBEIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BE EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBEE</defName>
+		<label>Desert Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBEE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBEEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BF -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBF</defName>
+		<label>Tiger Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBF</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBFIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BF EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBFE</defName>
+		<label>Tiger Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBFE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBFEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BG -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBG</defName>
+		<label>Nomad Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBG</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBGIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BG EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBGE</defName>
+		<label>Nomad Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBGE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBGEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BH -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBH</defName>
+		<label>Snow Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBH</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBHIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BH EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBHE</defName>
+		<label>Snow Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBHE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBHEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Shielded Concrete Wall BI -->
+    <ThingDef ParentName="SadjuukWallBaseCamoB">
+		<defName>SadjuukConcreteWallBI</defName>
+		<label>Ice Camo Wall</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBI</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBIIcon</uiIconPath>
+	</ThingDef>
+			
+<!-- Shielded Concrete Wall BI EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCamoBEmb">
+		<defName>SadjuukConcreteWallBIE</defName>
+		<label>Ice Camo Embrasure</label>
+		<description>HP : 1550
+Painted shielded concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallBIE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallBIEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Wall C -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseC" Abstract="True">
+    <statBases>
+      <MaxHitPoints>3350</MaxHitPoints>
+      <WorkToBuild>950</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>1</Beauty>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukConstructionD</li>
+    </researchPrerequisites>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>2</SadjuukArmoredPlate>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- Base Wall C EMBRASURE -->
+    <ThingDef ParentName="SadjuukWallBase" Name="SadjuukWallBaseCEmb" Abstract="True">
+    <statBases>
+      <MaxHitPoints>3350</MaxHitPoints>
+      <WorkToBuild>950</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>1</Beauty>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukConstructionD</li>
+    </researchPrerequisites>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>2</SadjuukArmoredPlate>
+			<SadjuukMetalGrid>1</SadjuukMetalGrid>
+	</costList>
+    <blockWind>false</blockWind>
+    <fillPercent>0.7</fillPercent>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    </ThingDef>
+	
+	
+<!-- Armored Concrete Wall CB -->
+    <ThingDef ParentName="SadjuukWallBaseC">
+		<defName>SadjuukConcreteWallCB</defName>
+        <designatorDropdown>SadjuukConcreteWallC</designatorDropdown>
+		<label>Armored Wall B</label>
+		<description>HP : 3350
+Armored concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCB</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCBIcon</uiIconPath>
+	</ThingDef>
+
+<!-- Armored Concrete Wall CB EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCEmb">
+		<defName>SadjuukConcreteWallCBE</defName>
+        <designatorDropdown>SadjuukConcreteWallCE</designatorDropdown>
+		<label>Armored Embrasure B</label>
+		<description>HP : 3350
+Armored concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCBE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCBEIcon</uiIconPath>
+	</ThingDef>	
+	
+<!-- Armored Concrete Wall CC -->
+    <ThingDef ParentName="SadjuukWallBaseC">
+		<defName>SadjuukConcreteWallCC</defName>
+        <designatorDropdown>SadjuukConcreteWallC</designatorDropdown>
+		<label>Armored Wall C</label>
+		<description>HP : 3350
+Armored concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCC</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCCIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>2</SadjuukArmoredPlate>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+
+<!-- Armored Concrete Wall CC EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCEmb">
+		<defName>SadjuukConcreteWallCAE</defName> <!-- SadjuukConcreteWallCCE  -->
+        <designatorDropdown>SadjuukConcreteWallCE</designatorDropdown>
+		<label>Armored Embrasure C</label>
+		<description>HP : 3350
+Armored concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCCE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCCEIcon</uiIconPath>
+	</ThingDef>
+	
+<!-- Armored Concrete Wall CD -->
+    <ThingDef ParentName="SadjuukWallBaseC">
+		<defName>SadjuukConcreteWallCD</defName>
+        <designatorDropdown>SadjuukConcreteWallC</designatorDropdown>
+		<label>Armored Wall D</label>
+		<description>HP : 3350
+Armored concrete wall.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCD</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCDIcon</uiIconPath>
+	<costList>
+			<SadjuukConcrete>6</SadjuukConcrete>
+			<SadjuukSteelPlate>2</SadjuukSteelPlate>
+			<SadjuukSyntheticPaint>2</SadjuukSyntheticPaint>
+		    <SadjuukArmoredPlate>2</SadjuukArmoredPlate>
+	</costList>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+	</ThingDef>
+
+<!-- Armored Concrete Wall CD EMBRASURE  -->
+    <ThingDef ParentName="SadjuukWallBaseCEmb">
+		<defName>SadjuukConcreteWallCDE</defName>
+        <designatorDropdown>SadjuukConcreteWallCE</designatorDropdown>
+		<label>Armored Embrasure D</label>
+		<description>HP : 3350
+Armored concrete Embrasure.</description>
+	<graphicData>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <texPath>SadjuukBUILD/WALL/SadjuukConcreteWallCDE</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>SadjuukBUILD/WALL/SadjuukConcreteWallCDEIcon</uiIconPath>
+	</ThingDef>
+	
+
+	
+</Defs>

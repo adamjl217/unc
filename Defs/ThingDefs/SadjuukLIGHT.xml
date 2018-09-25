@@ -1,0 +1,1683 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- Base Lights (ALL) -->
+    <ThingDef Abstract="True" Name="SadjuukAllLightBase" ParentName="BuildingBase">
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories>
+		<li>BuildingsFurniture</li>
+    </thingCategories>
+    <!-- <canOverlapZones>false</canOverlapZones> -->
+    <designationCategory>SadjuukUN-Furniture</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Street Light A -->
+    <ThingDef Abstract="True" Name="SadjuukStreetLightBaseA" ParentName="SadjuukAllLightBase">
+    <description>P : 40W, L : 16
+An industrial outdoor Street Light</description>
+	<designatorDropdown>SadjuukStreetLightA</designatorDropdown>
+    <altitudeLayer>Blueprint</altitudeLayer>
+	<placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0.2</Flammability>
+	  <Mass>10.0</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelPlate>1</SadjuukSteelPlate>
+		  <SadjuukSteelTube>4</SadjuukSteelTube>
+		  <SadjuukBasicComponent>4</SadjuukBasicComponent>
+		  <SadjuukWire>5</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+	   <li>SadjuukLightB</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+
+<!-- White Street Light A -->
+    <ThingDef ParentName="SadjuukStreetLightBaseA">
+    <defName>SadjuukStreetLightA</defName>
+    <label>White Street Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightA</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(5,5)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightAIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Street Light A -->
+    <ThingDef ParentName="SadjuukStreetLightBaseA">
+    <defName>SadjuukStreetLightAY</defName>
+    <label>Yellow Street Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightAY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(5,5)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightAYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+	
+
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Street Light B -->
+    <ThingDef Abstract="True" Name="SadjuukStreetLightBaseB" ParentName="SadjuukAllLightBase">
+    <description>P : 40W, L : 16
+An industrial outdoor Street Light</description>
+	<designatorDropdown>SadjuukStreetLightB</designatorDropdown>
+    <altitudeLayer>Blueprint</altitudeLayer>
+	<placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0.2</Flammability>
+	  <Mass>10.0</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelPlate>1</SadjuukSteelPlate>
+		  <SadjuukSteelTube>4</SadjuukSteelTube>
+		  <SadjuukBasicComponent>4</SadjuukBasicComponent>
+		  <SadjuukWire>5</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+	   <li>SadjuukLightB</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Street Light B -->
+    <ThingDef ParentName="SadjuukStreetLightBaseB">
+    <defName>SadjuukStreetLightB</defName>
+    <label>White Street Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightB</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(5,5)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Yellow Street Light B -->
+    <ThingDef ParentName="SadjuukStreetLightBaseB">
+    <defName>SadjuukStreetLightBY</defName>
+    <label>Yellow Street Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightBY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(5,5)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/StreetLight/SadjuukStreetLightBYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+  
+  
+  
+  
+<!-- =============================================================================================================================================== -->
+  
+<!-- Base wall light A -->
+    <ThingDef Abstract="True" Name="SadjuukWallLightBaseA" ParentName="SadjuukAllLightBase">
+    <description>P : 20W, L : 8
+A basic Wall Light.</description>
+	<designatorDropdown>SadjuukWallLightA</designatorDropdown>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0</fillPercent>
+    <rotatable>true</rotatable>
+	<building>
+      <isEdifice>false</isEdifice>
+    </building>
+	<clearBuildingArea>false</clearBuildingArea>
+    <passability>Standable</passability>
+	<size>(1,1)</size>
+    <costList>
+		  <SadjuukMetalGrid>1</SadjuukMetalGrid>
+		  <SadjuukBasicComponent>1</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    </ThingDef>
+  
+<!-- White Wall Light A -->
+	<ThingDef ParentName="SadjuukWallLightBaseA" >
+    <defName>SadjuukWallLightAWhite</defName>
+    <label>White Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightAWhite</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightAWhiteIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+  
+<!-- Yellow Wall Light A -->
+	<ThingDef ParentName="SadjuukWallLightBaseA" >
+    <defName>SadjuukWallLightAYellow</defName>
+    <label>Yellow Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightAYellow</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightAYellowIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Wall Light A -->
+	<ThingDef ParentName="SadjuukWallLightBaseA" >
+    <defName>SadjuukWallLightARed</defName>
+    <label>Red Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightARed</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightARedIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	  
+<!-- Green Wall Light A -->
+	<ThingDef ParentName="SadjuukWallLightBaseA" >
+    <defName>SadjuukWallLightAGreen</defName>
+    <label>Green Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightAGreen</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightAGreenIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+  
+<!-- Blue Wall Light A -->
+  	<ThingDef ParentName="SadjuukWallLightBaseA" >
+    <defName>SadjuukWallLightABlue</defName>
+    <label>Blue Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightABlue</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightABlueIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+  
+  
+<!-- =============================================================================================================================================== -->
+  
+<!-- Base wall light B -->
+    <ThingDef Abstract="True" Name="SadjuukWallLightBaseB" ParentName="SadjuukAllLightBase">
+    <description>P : 10W, L : 8
+LED Wall Light.</description>
+	<designatorDropdown>SadjuukWallLightB</designatorDropdown>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0</fillPercent>
+    <rotatable>true</rotatable>
+	<building>
+      <isEdifice>false</isEdifice>
+    </building>
+	<clearBuildingArea>false</clearBuildingArea>
+    <passability>Standable</passability>
+	<size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelTube>1</SadjuukSteelTube>
+		  <SadjuukBasicComponent>1</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukLightA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+
+<!-- White Wall Light B -->
+	<ThingDef ParentName="SadjuukWallLightBaseB" >
+    <defName>SadjuukWallLightBWhite</defName>
+    <label>White Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightBWhite</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightBWhiteIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	  
+<!-- Yellow Wall Light B -->
+	<ThingDef ParentName="SadjuukWallLightBaseB" >
+    <defName>SadjuukWallLightBYellow</defName>
+    <label>Yellow Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightBYellow</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightBYellowIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	  
+<!-- Red Wall Light B -->
+	<ThingDef ParentName="SadjuukWallLightBaseB" >
+    <defName>SadjuukWallLightBRed</defName>
+    <label>Red Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightBRed</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightBRedIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	  
+<!-- Green Wall Light B -->
+	<ThingDef ParentName="SadjuukWallLightBaseB" >
+    <defName>SadjuukWallLightBGreen</defName>
+    <label>Green Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightBGreen</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightBGreenIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+  
+<!-- Blue Wall Light B -->
+  	<ThingDef ParentName="SadjuukWallLightBaseB" >
+    <defName>SadjuukWallLightBBlue</defName>
+    <label>Blue Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightBBlue</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightBBlueIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+  
+<!-- Base wall light C -->
+    <ThingDef Abstract="True" Name="SadjuukWallLightBaseC" ParentName="SadjuukAllLightBase">
+    <description>P : 20W, L : 12
+A Heavy industrial LED Wall Light.</description>
+	<designatorDropdown>SadjuukWallLightC</designatorDropdown>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0</fillPercent>
+    <rotatable>true</rotatable>
+	<building>
+      <isEdifice>false</isEdifice>
+    </building>
+	<clearBuildingArea>false</clearBuildingArea>
+    <passability>Standable</passability>
+	<size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelPlate>1</SadjuukSteelPlate>
+		  <SadjuukSteelTube>1</SadjuukSteelTube>
+		  <SadjuukBasicComponent>1</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>SadjuukLightA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Wall Light C -->
+	<ThingDef ParentName="SadjuukWallLightBaseC" >
+    <defName>SadjuukWallLightCWhite</defName>
+    <label>White Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightCWhite</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightCWhiteIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Yellow Wall Light C -->
+	<ThingDef ParentName="SadjuukWallLightBaseC" >
+    <defName>SadjuukWallLightCYellow</defName>
+    <label>Yellow Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightCYellow</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightCYellowIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Wall Light C -->
+	<ThingDef ParentName="SadjuukWallLightBaseC" >
+    <defName>SadjuukWallLightCRed</defName>
+    <label>Red Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightCRed</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightCRedIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	  
+<!-- Green Wall Light C -->
+	<ThingDef ParentName="SadjuukWallLightBaseC" >
+    <defName>SadjuukWallLightCGreen</defName>
+    <label>Green Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightCGreen</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightCGreenIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+  
+<!-- Blue Wall Light C -->
+  	<ThingDef ParentName="SadjuukWallLightBaseC" >
+    <defName>SadjuukWallLightCBlue</defName>
+    <label>Blue Wall Light</label>
+	<graphicData>
+      <texPath>SadjuukLIGHT/WallLight/SadjuukWallLightCBlue</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/WallLight/SadjuukWallLightCBlueIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+	
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light A -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseA" ParentName="SadjuukAllLightBase">
+    <description>P : 30W, L : 12
+A basic Torch Light</description>
+	<designatorDropdown>SadjuukLightA</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>1</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+	   <li>Electricity</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Light AW -->
+    <ThingDef ParentName="SadjuukLightBaseA">
+    <defName>SadjuukLightAW</defName>
+    <label>White Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightAW</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightAWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light AY -->
+    <ThingDef ParentName="SadjuukLightBaseA">
+    <defName>SadjuukLightAY</defName>
+    <label>Yellow Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightAY</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightAYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light AR -->
+    <ThingDef ParentName="SadjuukLightBaseA">
+    <defName>SadjuukLightAR</defName>
+    <label>Red Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightAR</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightARIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light AG -->
+    <ThingDef ParentName="SadjuukLightBaseA">
+    <defName>SadjuukLightAG</defName>
+    <label>Green Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightAG</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightAGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light AB -->
+    <ThingDef ParentName="SadjuukLightBaseA">
+    <defName>SadjuukLightAB</defName>
+    <label>Blue Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightAB</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightABIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light B -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseB" ParentName="SadjuukAllLightBase">
+    <description>P : 10W, L : 8
+An industrial LED Light</description>
+	<designatorDropdown>SadjuukLightB</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>true</rotatable>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>1</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Light BW -->
+    <ThingDef ParentName="SadjuukLightBaseB">
+    <defName>SadjuukLightBW</defName>
+    <label>White Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightBW</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightBWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light BY -->
+    <ThingDef ParentName="SadjuukLightBaseB">
+    <defName>SadjuukLightBY</defName>
+    <label>Yellow Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightBY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightBYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light BR -->
+    <ThingDef ParentName="SadjuukLightBaseB">
+    <defName>SadjuukLightBR</defName>
+    <label>Red Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightBR</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightBRIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light BG -->
+    <ThingDef ParentName="SadjuukLightBaseB">
+    <defName>SadjuukLightBG</defName>
+    <label>Green Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightBG</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightBGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light BB -->
+    <ThingDef ParentName="SadjuukLightBaseB">
+    <defName>SadjuukLightBB</defName>
+    <label>Blue Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightBB</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightBBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+		
+<!-- =============================================================================================================================================== -->
+
+<!-- Base Light C -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseC" ParentName="SadjuukAllLightBase">
+    <description>P : 15W, L : 12
+A powerful but very efficient industrial LED Light</description>
+	<designatorDropdown>SadjuukLightC</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>true</rotatable>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukMetalGrid>1</SadjuukMetalGrid>
+		  <SadjuukBasicComponent>2</SadjuukBasicComponent>
+		  <SadjuukWire>1</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightA</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Light CW -->
+    <ThingDef ParentName="SadjuukLightBaseC">
+    <defName>SadjuukLightCW</defName>
+    <label>White Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightCW</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightCWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light CY -->
+    <ThingDef ParentName="SadjuukLightBaseC">
+    <defName>SadjuukLightCY</defName>
+    <label>Yellow Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightCY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightCYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light CR -->
+    <ThingDef ParentName="SadjuukLightBaseC">
+    <defName>SadjuukLightCR</defName>
+    <label>Red Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightCR</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightCRIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light CG -->
+    <ThingDef ParentName="SadjuukLightBaseC">
+    <defName>SadjuukLightCG</defName>
+    <label>Green Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightCG</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightCGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light CB -->
+    <ThingDef ParentName="SadjuukLightBaseC">
+    <defName>SadjuukLightCB</defName>
+    <label>Blue Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightCB</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightCBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light D -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseD" ParentName="SadjuukAllLightBase">
+    <description>P : 20W, L : 16
+A powerful advanced Torch Light.</description>
+	<designatorDropdown>SadjuukLightD</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Mass>6</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukArmoredPlate>1</SadjuukArmoredPlate>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>6</SadjuukBasicComponent>
+		  <SadjuukWire>2</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Light DW -->
+    <ThingDef ParentName="SadjuukLightBaseD">
+    <defName>SadjuukLightDW</defName>
+    <label>White Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightDW</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightDWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light DY -->
+    <ThingDef ParentName="SadjuukLightBaseD">
+    <defName>SadjuukLightDY</defName>
+    <label>Yellow Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightDY</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightDYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light DR -->
+    <ThingDef ParentName="SadjuukLightBaseD">
+    <defName>SadjuukLightDR</defName>
+    <label>Red Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightDR</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightDRIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light DG -->
+    <ThingDef ParentName="SadjuukLightBaseD">
+    <defName>SadjuukLightDG</defName>
+    <label>Green Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightDG</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightDGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light DB -->
+    <ThingDef ParentName="SadjuukLightBaseD">
+    <defName>SadjuukLightDB</defName>
+    <label>Blue Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightDB</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightDBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light E -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseE" ParentName="SadjuukAllLightBase">
+    <description>P : 20W, L : 16
+A powerful advanced Torch Light.</description>
+	<designatorDropdown>SadjuukLightE</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Mass>6</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukArmoredPlate>1</SadjuukArmoredPlate>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>6</SadjuukBasicComponent>
+		  <SadjuukWire>2</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+	
+<!-- White Light EW -->
+    <ThingDef ParentName="SadjuukLightBaseE">
+    <defName>SadjuukLightEW</defName>
+    <label>White Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightEW</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightEWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light EY -->
+    <ThingDef ParentName="SadjuukLightBaseE">
+    <defName>SadjuukLightEY</defName>
+    <label>Yellow Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightEY</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightEYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light ER -->
+    <ThingDef ParentName="SadjuukLightBaseE">
+    <defName>SadjuukLightER</defName>
+    <label>Red Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightER</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightERIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light EG -->
+    <ThingDef ParentName="SadjuukLightBaseE">
+    <defName>SadjuukLightEG</defName>
+    <label>Green Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightEG</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightEGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light EB -->
+    <ThingDef ParentName="SadjuukLightBaseE">
+    <defName>SadjuukLightEB</defName>
+    <label>Blue Torch</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightEB</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightEBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light F -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseF" ParentName="SadjuukAllLightBase">
+    <description>P : 15W, L : 12
+An aesthetic advanced Light.</description>
+	<designatorDropdown>SadjuukLightF</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>true</rotatable>
+    <statBases>
+      <Mass>6</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukArmoredPlate>1</SadjuukArmoredPlate>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>4</SadjuukBasicComponent>
+		  <SadjuukWire>2</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+
+<!-- White Light FW -->
+    <ThingDef ParentName="SadjuukLightBaseF">
+    <defName>SadjuukLightFW</defName>
+    <label>White Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightFW</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightFWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light FY -->
+    <ThingDef ParentName="SadjuukLightBaseF">
+    <defName>SadjuukLightFY</defName>
+    <label>Yellow Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightFY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightFYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light FR -->
+    <ThingDef ParentName="SadjuukLightBaseF">
+    <defName>SadjuukLightFR</defName>
+    <label>Red Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightFR</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightFRIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light FG -->
+    <ThingDef ParentName="SadjuukLightBaseF">
+    <defName>SadjuukLightFG</defName>
+    <label>Green Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightFG</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightFGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light FB -->
+    <ThingDef ParentName="SadjuukLightBaseF">
+    <defName>SadjuukLightFB</defName>
+    <label>Blue Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightFB</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightFBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Base Light G -->
+    <ThingDef Abstract="True" Name="SadjuukLightBaseG" ParentName="SadjuukAllLightBase">
+    <description>P : 15W, L : 12
+An aesthetic advanced Light.</description>
+	<designatorDropdown>SadjuukLightG</designatorDropdown>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>true</rotatable>
+    <statBases>
+      <Mass>6</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+		  <SadjuukArmoredPlate>1</SadjuukArmoredPlate>
+		  <SadjuukSteelTube>2</SadjuukSteelTube>
+		  <SadjuukBasicComponent>4</SadjuukBasicComponent>
+		  <SadjuukWire>2</SadjuukWire>
+    </costList>
+    <building>
+      <isEdifice>true</isEdifice>
+    </building>
+	<clearBuildingArea>true</clearBuildingArea>
+    <researchPrerequisites>
+      <li>SadjuukLightC</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+
+<!-- White Light GW -->
+    <ThingDef ParentName="SadjuukLightBaseG">
+    <defName>SadjuukLightGW</defName>
+    <label>White Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightGW</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightGWIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,175,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Yellow Light GY -->
+    <ThingDef ParentName="SadjuukLightBaseG">
+    <defName>SadjuukLightGY</defName>
+    <label>Yellow Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightGY</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightGYIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(254,235,120,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+	
+<!-- Red Light GR -->
+    <ThingDef ParentName="SadjuukLightBaseG">
+    <defName>SadjuukLightGR</defName>
+    <label>Red Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightGR</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightGRIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,30,0,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Green Light GG -->
+    <ThingDef ParentName="SadjuukLightBaseG">
+    <defName>SadjuukLightGG</defName>
+    <label>Green Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightGG</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightGGIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(105,202,105,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+<!-- Blue Light GB -->
+    <ThingDef ParentName="SadjuukLightBaseG">
+    <defName>SadjuukLightGB</defName>
+    <label>Blue Light</label>
+    <graphicData>
+		  <texPath>SadjuukLIGHT/Light/SadjuukLightGB</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconPath>SadjuukLIGHT/Light/SadjuukLightGBIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,100,208,0)</glowColor>
+      </li>
+    </comps>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+
+	
+	
+<!-- Wooden Pallet-->
+    <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>SadjuukWoodenPallet</defName>
+    <label>Wooden Pallet</label>
+    <description>A Wooden Pallet, easy to build and allowing a standardized storage.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukWoodenPallet</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+	<rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <costList>	  
+		  <WoodLog>4</WoodLog>
+    </costList>
+    <statBases>
+      <MaxHitPoints>35</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>Manufactured</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationHotKey>Misc12</designationHotKey>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+	<designationCategory>SadjuukUN-Industry</designationCategory>
+    </ThingDef>
+
+<!-- =============================================================================================================================================== -->
+ 
+<!-- Base Production machine -->
+    <ThingDef Name="SadjuukProdMachineBase" ParentName="BenchBase" Abstract="True">
+	<thingClass>Building_WorkTable</thingClass>
+	<category>Building</category>
+	<altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+	<rotatable>true</rotatable>
+	<clearBuildingArea>true</clearBuildingArea>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+	<tickerType>Normal</tickerType>
+	<canOverlapZones>false</canOverlapZones>
+	<designationCategory>SadjuukUN-Industry</designationCategory>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<constructEffect>ConstructMetal</constructEffect>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>		
+	<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	<hasInteractionCell>true</hasInteractionCell>
+	<surfaceType>Item</surfaceType>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+<!-- Metalworking Bench -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukMetalworkingBench</defName>
+		<label>Metalworking Bench</label>
+		<description>Very basic Metalworking Bench.</description>
+    <statBases>
+		  <MaxHitPoints>180</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(2,1)</size>
+    <costList>	  
+		  <Steel>90</Steel>
+    </costList>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukMetalworkingBench</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(3,2)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukSteelPlateRecipe2A</li>
+		<li>SadjuukSteelPlateRecipeA</li>
+		<li>SadjuukMetalGridRecipeA</li>
+		<li>SadjuukMetalGridRecipeAB</li>
+		<li>SadjuukSteelTubeRecipeA</li>
+		<li>SadjuukSteelTubeRecipeAB</li>
+		<li>SadjuukBasicComponentRecipeA</li>
+		<li>SadjuukWireRecipeA</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>Electricity</li>
+	</researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SadjuukShaper</li>
+          <li>SadjuukLathe</li>
+          <li>SadjuukShear</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Bessemer Converter -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukBessemerConverter</defName>
+		<label>Bessemer Converter</label>
+		<description>First inexpensive industrial process for the mass production of steel. Obsolete since the development of the open hearth furnace.</description>
+    <statBases>
+		  <MaxHitPoints>1800</MaxHitPoints>
+		  <WorkToBuild>13500</WorkToBuild>
+		  <Flammability>0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(2,2)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>32</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>395</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>55</SadjuukMetalGrid>
+		  <SadjuukSteelTube>8</SadjuukSteelTube>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>20.0</fuelConsumptionRate>
+        <fuelCapacity>75.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>25</heatPerSecond>
+	    <heatPushMaxTemperature>50</heatPushMaxTemperature>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukBessemerConverter</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(3,3)</drawSize>
+	</graphicData>
+	<uiIconPath>SadjuukPROD/SadjuukBessemerConverterIcon</uiIconPath>
+	<recipes>
+		<li>SadjuukSteelSlabRecipeA</li>
+		<li>SadjuukSteelSlabRecipeCA</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukMetallurgyA</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- Open Hearth Furnace -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukOpenHearthFurnace</defName>
+		<label>Open Hearth Furnace</label>
+		<description>Furnace where excess carbon and other impurities are burnt out of pig iron to produce steel.</description>
+    <statBases>
+		  <MaxHitPoints>2000</MaxHitPoints>
+		  <WorkToBuild>15000</WorkToBuild>
+		  <Flammability>0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(5,3)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>120</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>500</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>80</SadjuukMetalGrid>
+		  <SadjuukSteelTube>70</SadjuukSteelTube>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.042</fuelConsumptionRate>
+        <fuelCapacity>3</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>SadjuukFuelOil</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>50</heatPerSecond>
+	    <heatPushMaxTemperature>50</heatPushMaxTemperature>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukOpenHearthFurnace</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(6,4)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukSteelSlabRecipeB</li>
+		<li>SadjuukSteelSlabRecipeCB</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukMetallurgyB</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- Electric Arc Furnace -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukElectricArcFurnace</defName>
+		<label>Electric Arc Furnace</label>
+		<description>Furnace that heats charged material by means of an electric arc. Very high production rate.</description>
+    <statBases>
+		  <MaxHitPoints>2600</MaxHitPoints>
+		  <WorkToBuild>19500</WorkToBuild>
+		  <Flammability>0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(7,4)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>240</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>880</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>170</SadjuukMetalGrid>
+		  <SadjuukSteelTube>250</SadjuukSteelTube>
+		  <SadjuukWire>240</SadjuukWire>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2050</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>75</heatPerSecond>
+	    <heatPushMaxTemperature>50</heatPushMaxTemperature>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukElectricArcFurnace</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(8,5)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukSteelSlabRecipeC</li>
+		<li>SadjuukSteelSlabRecipeCC</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(-2,0,-2)</interactionCellOffset>
+    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukMetallurgyC</li>
+	</researchPrerequisites>
+	</ThingDef>
+
+<!-- =============================================================================================================================================== -->
+
+<!-- Base Production Upgrade -->
+    <ThingDef Name="SadjuukProdUpgradeBase" ParentName="BuildingBase" Abstract="True">
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+	<designationCategory>SadjuukUN-Industry</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+	</ThingDef>
+  
+<!-- =============================================================================================================================================== -->
+
+<!-- Metalworking Line -->
+
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukMetalworkingLineB</defName>
+		<label>Metalworking Line</label>
+		<description>The Metalworking Line is a very versatile production line to work the metal.</description>
+    <statBases>
+		  <MaxHitPoints>330</MaxHitPoints>
+		  <WorkToBuild>4950</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(7,2)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>36</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>120</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>25</SadjuukMetalGrid>
+		  <SadjuukSteelTube>55</SadjuukSteelTube>
+		  <SadjuukWire>14</SadjuukWire>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>260</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SadjuukShaper</li>
+          <li>SadjuukGrinding</li>
+          <li>SadjuukWeldingRobot</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukMetalworkingLine</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(8,8)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukMetalGridRecipeB</li>
+		<li>SadjuukMetalGridRecipeC</li>
+		<li>SadjuukSteelTubeRecipeB</li>
+		<li>SadjuukSteelTubeRecipeC</li>
+		<li>SadjuukWireRecipeB</li>
+		<li>SadjuukWireRecipeC</li>
+		<li>SadjuukArmoredPlateRecipeB</li>
+		<li>SadjuukArmoredPlateRecipeC</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukProductionA</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+<!-- Metalworking Line Upgrade -->
+
+<!-- A- Shaper -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukShaper</defName>
+    <label>Shaper Tool</label>
+    <description>Metalworking Line Upgrade.
+A Shaper tool. Its most common use is to machine straight flat surfaces, but with ingenuity and some accessories a wide range of work can be done.
+Production Factor : 0.20, 1 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>8</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>25</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>4</SadjuukMetalGrid>
+		  <SadjuukSteelTube>8</SadjuukSteelTube>
+		  <SadjuukWire>6</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>180</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>40</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukShaper</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+	<uiIconPath>SadjuukPROD/SadjuukShaperIcon</uiIconPath>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>	
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.20</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>45</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+<!-- B- Grinding Machine -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukGrinding</defName>
+    <label>Grinding Machine</label>
+    <description>Metalworking Line Upgrade.
+A Grinding Machine used to finish workpieces that must show high surface quality and high accuracy of shape and dimension.
+Production Factor : 0.40, 1 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>19</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>80</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>45</SadjuukMetalGrid>
+		  <SadjuukSteelTube>15</SadjuukSteelTube>
+		  <SadjuukWire>24</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>240</MaxHitPoints>
+		  <WorkToBuild>3600</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>80</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukGrinding</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+	<uiIconPath>SadjuukPROD/SadjuukGrindingIcon</uiIconPath>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>	
+    <researchPrerequisites>
+      <li>SadjuukProductionB</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.40</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>115</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+<!-- C- Welding Robot -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukWeldingRobot</defName>
+    <label>Welding Robot</label>
+    <description>Metalworking Line Upgrade.
+A mechanized programmable tool, completely automating a welding process by both performing the weld and handling the part.
+Production Factor : 0.80, 2 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>134</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>220</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>24</SadjuukMetalGrid>
+		  <SadjuukSteelTube>26</SadjuukSteelTube>
+		  <SadjuukWire>82</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>450</MaxHitPoints>
+		  <WorkToBuild>6750</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>120</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukWeldingRobot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <size>(2,3)</size>
+	<uiIconPath>SadjuukPROD/SadjuukWeldingRobotIcon</uiIconPath>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>	
+    <researchPrerequisites>
+      <li>SadjuukProductionC</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.80</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>480</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+<!-- Assembly Line -->
+
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukAssemblyLineB</defName>
+		<label>Assembly Line</label>
+		<description>The Assembly Line is a production line allowing to assemble a wide variety of components.</description>
+    <statBases>
+		  <MaxHitPoints>240</MaxHitPoints>
+		  <WorkToBuild>3600</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(7,2)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>44</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>110</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>18</SadjuukMetalGrid>
+		  <SadjuukSteelTube>22</SadjuukSteelTube>
+		  <SadjuukWire>68</SadjuukWire>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SadjuukLathe</li>
+          <li>SadjuukMilling</li>
+          <li>SadjuukAssemblyRobot</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukAssemblyLine</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(8,8)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukBasicComponentRecipeB</li>
+		<li>SadjuukBasicComponentRecipeC</li>
+		<li>SadjuukSolarCellRecipeA</li>
+		<!-- <li>SadjuukPowerCellRecipeA</li>-->
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukProductionA</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+<!-- Assembly Line Upgrade -->
+
+<!-- A- Metal Lathe -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukLathe</defName>
+    <label>Metal Lathe</label>
+    <description>Assembly Line Upgrade.
+Machine tool removing material from a rotating workpiece via the movements of various cutting tools.
+Production Factor : 0.20, 1 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>14</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>25</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>15</SadjuukMetalGrid>
+		  <SadjuukSteelTube>5</SadjuukSteelTube>
+		  <SadjuukWire>7</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>180</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>40</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukLathe</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+	<uiIconPath>SadjuukPROD/SadjuukLatheIcon</uiIconPath>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>	
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.20</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>45</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+  
+<!-- B- Milling Machine -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukMilling</defName>
+    <label>Milling Machine</label>
+    <description>Assembly Line Upgrade.
+A Milling Machine that removes material from a workpiece by advancing the cutter into the workpiece.
+Production Factor : 0.40, 1 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>25</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>80</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>32</SadjuukMetalGrid>
+		  <SadjuukSteelTube>18</SadjuukSteelTube>
+		  <SadjuukWire>34</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>240</MaxHitPoints>
+		  <WorkToBuild>3600</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>80</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukMilling</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+	
+	<uiIconPath>SadjuukPROD/SadjuukMillingIcon</uiIconPath>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>	
+    <researchPrerequisites>
+      <li>SadjuukProductionB</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.40</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>120</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+	
+<!-- C- Assembly Robot -->
+  <ThingDef ParentName="SadjuukProdUpgradeBase">
+    <defName>SadjuukAssemblyRobot</defName>
+    <label>Assembly Robot</label>
+    <description>Assembly Line Upgrade.
+A multi-role robot capable of assembling, picking, and packing with a high endurance, speed, and precision.
+Production Factor : 0.80, 2 per line max.</description>
+    <costList>
+		  <SadjuukBasicComponent>185</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>180</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>9</SadjuukMetalGrid>
+		  <SadjuukSteelTube>6</SadjuukSteelTube>
+		  <SadjuukWire>92</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>330</MaxHitPoints>
+		  <WorkToBuild>4950</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+          <Mass>120</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>SadjuukPROD/SadjuukAssemblyRobot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <size>(2,3)</size>
+	<uiIconPath>SadjuukPROD/SadjuukAssemblyRobotIcon</uiIconPath>
+    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>	
+    <researchPrerequisites>
+      <li>SadjuukProductionC</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.80</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>280</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Construction Machinery -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukConstructionMachinery</defName>
+		<label>Construction Machinery</label>
+		<description>A very complex machinery capable of extracting silicon from the rock and coarsely refined organic elements to produce glass, concrete and asphalt.</description>
+    <statBases>
+		  <MaxHitPoints>650</MaxHitPoints>
+		  <WorkToBuild>9750</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(7,2)</size>
+    <costList>	  
+		  <SadjuukBasicComponent>28</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>150</SadjuukSteelPlate>
+		  <SadjuukSteelTube>75</SadjuukSteelTube>
+		  <SadjuukWire>36</SadjuukWire>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+      </li>
+    </comps>
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukConstructionMachinery</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(8,8)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukConcreteRecipeA</li>
+		<li>SadjuukConcreteRecipeB</li>
+		<li>SadjuukGlassRecipeA</li>
+		<li>SadjuukSyntheticPaintRecipe</li>
+		<li>SadjuukSyntheticPaintRecipeB</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukConstructionA</li>
+	</researchPrerequisites>
+	</ThingDef>
+		
+
+	
+<!-- =============================================================================================================================================== -->
+	
+<!-- Fuel Oil Refinery -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukRefineryA</defName>
+		<label>Fuel Oil Refinery</label>
+		<description>Medium capacity Refinery. Good efficiency, far from conventional industrial capabilities but known as reliable and versatile.</description>
+    <statBases>
+		  <MaxHitPoints>450</MaxHitPoints>
+		  <WorkToBuild>6750</WorkToBuild>
+		  <Flammability>0.8</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(5,3)</size>
+    <costList>
+		  <SadjuukBasicComponent>50</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>78</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>22</SadjuukMetalGrid>
+		  <SadjuukSteelTube>125</SadjuukSteelTube>
+		  <SadjuukWire>45</SadjuukWire>
+    </costList>
+    <comps>
+	  <li Class="CompProperties_Explosive">
+        <explosiveRadius>6</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <destroyThingOnExplosionSize>0</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>
+          <min>70</min>
+          <max>150</max>
+        </wickTicks>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>270</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>2</heatPerSecond>
+      </li>
+    </comps>	
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukRefineryA</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(6,6)</drawSize>
+	</graphicData>
+	<recipes>
+		<li>SadjuukChemfuelRecipeA</li>
+		<li>SadjuukChemfuelRecipeC</li>
+		<li>SadjuukFuelOilRecipeA</li>
+		<li>SadjuukFuelOilRecipeB</li>
+		<li>SadjuukFuelOilRecipeC</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukFuelOilA</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- Diesel Refinery -->
+	<ThingDef ParentName="SadjuukProdMachineBase">
+		<defName>SadjuukRefineryB</defName>
+		<label>Diesel Refinery</label>
+		<description>Medium capacity Refinery. Good efficiency, far from conventional industrial capabilities but known as reliable and versatile.</description>
+    <statBases>
+		  <MaxHitPoints>350</MaxHitPoints>
+		  <WorkToBuild>5250</WorkToBuild>
+		  <Flammability>1.0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(3,3)</size>
+    <costList>
+		  <SadjuukBasicComponent>32</SadjuukBasicComponent>
+		  <SadjuukSteelPlate>65</SadjuukSteelPlate>
+		  <SadjuukMetalGrid>20</SadjuukMetalGrid>
+		  <SadjuukSteelTube>90</SadjuukSteelTube>
+		  <SadjuukWire>62</SadjuukWire>
+    </costList>
+    <comps>
+	  <li Class="CompProperties_Explosive">
+        <explosiveRadius>6</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <destroyThingOnExplosionSize>0</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>
+          <min>70</min>
+          <max>150</max>
+        </wickTicks>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>210</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(230,170,25,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>2</heatPerSecond>
+      </li>
+    </comps>	
+	<graphicData>
+		<texPath>SadjuukPROD/SadjuukRefineryB</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(4,4)</drawSize>
+	</graphicData>
+	<uiIconPath>SadjuukPROD/SadjuukRefineryBIcon</uiIconPath>
+	<recipes>
+		<li>SadjuukDieselRecipeA</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<interactionCellOffset>(-1,0,-2)</interactionCellOffset>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+		<li>SadjuukDieselA</li>
+	</researchPrerequisites>
+	</ThingDef>
+	
+<!-- =============================================================================================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- OLD MACHINERY TO REMOVE -->
+    <ThingDef Name="ToRemoveSadjuukProdMachineBase" ParentName="BuildingBase" Abstract="True">
+	<label>Old machinery</label>
+	<description>Old machinery</description>
+	<thingClass>Building</thingClass>
+	<category>Building</category>
+	<altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+	<rotatable>true</rotatable>
+	<clearBuildingArea>true</clearBuildingArea>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+	<tickerType>Normal</tickerType>
+	<canOverlapZones>false</canOverlapZones>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+	<constructEffect>ConstructMetal</constructEffect>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>		
+	<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <costList>	  
+		  <ComponentIndustrial>7</ComponentIndustrial>
+		  <SadjuukSteelPlate>100</SadjuukSteelPlate>
+		  <SadjuukSteelTube>50</SadjuukSteelTube>
+		  <SadjuukWire>50</SadjuukWire>
+    </costList>
+    <statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToBuild>4000</WorkToBuild>
+		  <Flammability>0.2</Flammability>
+    </statBases>
+	</ThingDef>
+
+<!-- MetalworkingLine -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukMetalworkingLine</defName>
+    <size>(7,1)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukMetalworkingLine</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(8,2)</drawSize>
+	</graphicData>
+	</ThingDef>
+
+<!-- RollingMill -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukRollingMill</defName>
+    <size>(5,1)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukRollingMill</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(6,2)</drawSize>
+	</graphicData>
+	</ThingDef>
+
+<!-- AssemblyLine -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukAssemblyLine</defName>
+    <size>(5,1)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukAssemblyLine</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(6,2)</drawSize>
+	</graphicData>
+	</ThingDef>
+
+<!-- ConcreteMachinery -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukConcreteMachinery</defName>
+    <size>(4,4)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukConcreteMachinery</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(6,6)</drawSize>
+	</graphicData>
+	</ThingDef>
+	
+<!-- PaintMachinery -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukPaintMachinery</defName>
+    <size>(3,1)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukPaintMachinery</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(3,1)</drawSize>
+	</graphicData>
+	</ThingDef>
+	
+<!-- GlassMachinery -->
+	<ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+		<defName>SadjuukGlassMachinery</defName>
+    <size>(7,2)</size>
+	<graphicData>
+		<texPath>ToRemove/SadjuukGlassMachinery</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(8,8)</drawSize>
+	</graphicData>
+	</ThingDef>
+
+<!-- Shear -->
+  <ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+    <defName>SadjuukShear</defName>
+    <graphicData>
+      <texPath>ToRemove/SadjuukShear</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+  </ThingDef>
+	
+<!-- WaterCutter -->
+  <ThingDef ParentName="ToRemoveSadjuukProdMachineBase">
+    <defName>SadjuukWaterCutter</defName>
+    <graphicData>
+      <texPath>ToRemove/SadjuukWaterCutter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+  </ThingDef>
+	
+	
+</Defs>
